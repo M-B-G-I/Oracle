@@ -151,8 +151,7 @@ Autrement dit, le développeur déclare qu’une lecture va être suivie d’une
 | t12| ------ | ```COMMIT;```|Conservation des changements avec commit|
 | t13| ``` UPDATE EMP SET SAL = 5000 WHERE ENAME ='Maaoui'; ``` |------|Le salaire de Maaoui a été modifié (5000)|
 | t14| ------ |```SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;```|Isolation Totale|
-| t15| ------ |```UPDATE EMP SET SAL = 5200 WHERE ENAME ='Maaoui';```|Pas de changement de salaire (verrouillage dans la session 1 sur la ligne ENAME ='Maaoui')
-|
+| t15| ------ |```UPDATE EMP SET SAL = 5200 WHERE ENAME ='Maaoui';```|Pas de changement de salaire (verrouillage dans la session 1 sur la ligne ENAME ='Maaoui')|
 | t16| ```COMMIT;``` |------|La ligne ENAME ='Maaoui' n’est plus verrouillée|
 | t17| ------ |```ROLLBACK;```|Retour au dernier Commit --> faire une nouvelle isolation avec les dernières MAJ de Maaoui|
 | t18| ------ |```SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;```|Isolation Totale|
